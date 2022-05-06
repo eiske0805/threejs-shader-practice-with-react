@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  // mode: 'development',
-  // devtool: 'none',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -32,7 +30,6 @@ module.exports = {
   },
 
   devServer: {
-    // contentBase: outputPath,
     open: true,
   },
 
