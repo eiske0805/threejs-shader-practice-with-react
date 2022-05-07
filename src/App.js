@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas, extend } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
-
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { ChakraProvider, Heading } from '@chakra-ui/react';
 
 import './style.scss';
@@ -19,6 +19,10 @@ function App() {
         <color attach="background" args={[0xeeeeee]} />
         <mesh>
           <planeBufferGeometry args={[2, 2, 16, 16]} />
+          <planeShaderMaterial wireframe />
+        </mesh>
+        <mesh>
+          <torusKnotBufferGeometry args={[2, 2, 16, 16]} />
           <planeShaderMaterial wireframe />
         </mesh>
       </Canvas>
