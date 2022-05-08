@@ -17,8 +17,7 @@ void main() {
   float delay = distance(vec2(0., 1.), uv) / distance(vec2(0., 1.), vec2(1., 0.));
   float x = clamp(sTime * 2. - delay * 0.1, 0., 1.);
   float progress = exponential(x);
-
-  vec3 axis = vec3(1.0, 1.0, 1.0);
+  vec3 axis = vec3(1.0, 1.0, 0);
   pos = rotate(pos, axis, 4.0 * HALF_PI * progress);
   pos.z += progress * 10.;
 
