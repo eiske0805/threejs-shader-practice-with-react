@@ -1,9 +1,0 @@
-precision highp float;
-
-varying vec2 vUv;
-uniform sampler2D uTex;
-
-
-void main() {
-  gl_FragColor = texture(uTex, vUv);
-}
