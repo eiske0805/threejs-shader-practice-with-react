@@ -13,6 +13,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpe?g|png|svg|gif|ico)$/i,
+        loader: 'url-loader',
+        options: {
+          limit: 4096,
+          name: '[name].[ext]',
+          outputPath: 'images',
+        },
+      },
+      {
         test: /\.(glsl|vs|fs|vert|frag)$/,
         exclude: /node_modules/,
         use: ['raw-loader', 'glslify-loader'],
